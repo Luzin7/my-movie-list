@@ -1,0 +1,26 @@
+.header__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+  width: 100%;
+}
+
+.header__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__link {
+  color: var(--white__color);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 21px;
+  padding: 1em;
+  transition: all 0.2s;
+}
+
+.header__link:hover {
+  text-shadow: 2px 2px 0px var(--purple__color);
+}

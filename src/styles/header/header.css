@@ -1,0 +1,8 @@
+.header {
+  background-color: var(--dark__blue-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 8vh;
+}

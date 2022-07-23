@@ -1,0 +1,73 @@
+.movies__watched {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background: url("https://c.tenor.com/AJBv6U1rfkQAAAAC/background-image-galaxy.gif");
+  min-width: 100%;
+}
+
+.movies__title-sec {
+  padding-top: 1em;
+  font-size: 38px;
+  text-shadow: 2px 4px 0px var(--purple__color);
+}
+
+.movies__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4em 0px 1em 0px;
+}
+
+.movies__cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.movie__card {
+  display: flex;
+  flex-direction: column;
+  background: url("https://c.tenor.com/ga_-GfdZDtkAAAAC/purple-rain-wallpaper.gif");
+  text-align: center;
+  border-radius: 15px;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 4px 7px 0px 0px var(--dark__purple-color);
+  align-items: center;
+  /* justify-content: center; */
+  width: 500px;
+}
+
+.movie__title {
+  letter-spacing: 2px;
+  font-size: 24px;
+  background-color: var(--dark__purple-color);
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 4px 0px 0px 0px var(--dark__purple-color);
+}
+
+.movies__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.movie__img {
+  border-radius: 15px;
+  height: 100%;
+}
+
+.movie__desc-text {
+  background-color: var(--purple__color);
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 0px 0px 15px 15px;
+  box-shadow: 0px 7px 0px 0px var(--dark__purple-color);
+}
