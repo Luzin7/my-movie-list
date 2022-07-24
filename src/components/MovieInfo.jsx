@@ -21,7 +21,7 @@ function MovieInfo() {
           <span className="rating">{`${movie.rating}/5`}</span>
         </div>
         <div className="movie__info__desc">
-          <p className="movie__info__desc-text">{movie.description}</p>
+          <p className="movie__info__desc-text">{movie.long__description}</p>
         </div>
       </div>
     </div>

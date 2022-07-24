@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   min-height: 92vh;
-  background-color: var();
 }
 
 .movie__info__content {
@@ -13,17 +12,6 @@
   justify-content: center;
   align-items: center;
 }
-/* 
-.movie .movie__info {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  max-width: 940px;
-  width: auto;
-  width: auto;
-} */
 
 .movie__info .movie__img {
   width: 960px;
@@ -38,7 +26,7 @@
   flex-flow: column-reverse wrap;
   justify-content: center;
   align-items: center;
-  padding: 2em;
+  padding: 2em 0px 1em 0px;
 }
 
 .movie__info__title {
@@ -69,10 +57,11 @@
 }
 
 .movie__info__desc {
-  max-width: 100%;
+  max-width: 70%;
   width: auto;
   font-weight: lighter;
-  text-align: justify;
+  text-align: center;
+  padding-bottom: 2em;
 }
 
 .movie__info__desc-text {
