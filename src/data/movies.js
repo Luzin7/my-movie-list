@@ -102,6 +102,17 @@ export const MOVIES = [
     media:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQC5n5VF4hPqSKSXn4UQotUcfoasi0bOqk-c5SUaJ9dBsazOr5KC8ByOFY973IYp1kEdU&usqp=CAU",
   },
+  {
+    id: 22,
+    name: "O hereditário",
+    description: "Estou sem cabeça pra esse filme.",
+    long__description:
+      "O filme poderia ser resolvido se a mãe fosse estéril. Pela primeira vez na vida a OMS ta recomendando infertilidade",
+    rating: "3.3",
+    img: "https://br.web.img3.acsta.net/pictures/18/06/14/13/11/1751062.jpg",
+    media:
+      "https://3.bp.blogspot.com/-NiOIYgjZSkI/WzZmt9iJf7I/AAAAAAAAQAs/LdhknhXjZFMU4t4amHw6Evv4tvFRTJ6HwCEwYBhgL/s1600/giphy%2B%25284%2529.gif",
+  },
 ];
 
 export const NEXT_MOVIES = [
@@ -110,11 +121,6 @@ export const NEXT_MOVIES = [
     name: "Drive",
     media:
       "https://upload.wikimedia.org/wikipedia/pt/e/e6/Drive-P%C3%B4ster.jpg",
-  },
-  {
-    id: 3,
-    name: "O hereditário",
-    media: "https://br.web.img3.acsta.net/pictures/18/06/14/13/11/1751062.jpg",
   },
   {
     id: 5,
