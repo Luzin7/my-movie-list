@@ -5,15 +5,18 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
-  color: var(--white__color);
+  color: var(--text-color__black);
 }
 
 *::selection {
-  background-color: var(--yellow__color);
-  color: var(--blue__color);
+  background-color: var(--beige__color);
+  color: var(--text-color__black);
 }
 
 html {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
   scroll-behavior: smooth;
 }
 
@@ -21,8 +24,19 @@ body {
   background-color: var(--black__color);
 }
 
-a,
-NavLink {
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--bg__color); /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--beige__color); /* color of the scroll thumb */
+}
+
+a {
   color: var(--white__color);
   text-decoration: none;
 }
@@ -41,18 +55,22 @@ progress {
   -webkit-appearance: none;
 }
 
-:root {
+/* :root {
   --black__color: #1b1b1b;
   --purple__color: #9308f0;
   --dark__purple-color: #28026f;
   --white__color: #fefeff;
   --yellow__color: #ffe66d;
-}
+} */
 
-.btn {
-  background: var(--mint__cream-color);
-  padding: 1em 2em;
-  border-radius: 7px;
-  text-transform: uppercase;
-  font-weight: bold;
+:root {
+  --bg__color: #2d2424;
+  --brown__color: #5c3d2e;
+  --light-brown__color: #614436;
+  --orange__color: #b85c38;
+  --white__color: #fefeff;
+  --black__color: #1b1b1b;
+  --beige__color: #e0c097;
+
+  --text-color__black: #0f0f0f;
 }

@@ -2,6 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 import * as Path from "../utils/pathNames";
+import "../scripts/changeColorHeader";
+
 import "../styles/header/header.css";
 import "../styles/header/headerContent.css";
 

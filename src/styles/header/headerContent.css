@@ -1,6 +1,18 @@
 .header__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   letter-spacing: 2px;
+  position: fixed;
+  background-color: var(--beige__color);
+  width: 100%;
+  height: 8vh;
+  transition: all 0.4s;
+}
+
+#bw-color {
+  background-color: grey;
 }
 
 .header__links {
@@ -16,8 +28,10 @@
   font-size: 21px;
   padding: 1em;
   transition: all 0.2s;
+  text-align: center;
+  text-shadow: 1px 1px 0px var(--bg__color);
 }
 
-.header__link:hover {
-  text-shadow: 2px 2px 0px var(--purple__color);
+.header__link.active:hover {
+  text-shadow: none;
 }

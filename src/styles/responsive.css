@@ -1,0 +1,14 @@
+@media only screen and (max-width: 600px) and (min-width: 100px) {
+  .movie__info .movie__img {
+    max-width: 260px;
+    max-height: 700px;
+    border-radius: 15px;
+    box-shadow: 4px 7px 2px 1px var(--dark__purple-color);
+    overflow: hidden;
+  }
+  .movies__img {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+  }
+}

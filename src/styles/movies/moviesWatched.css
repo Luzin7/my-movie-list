@@ -3,12 +3,14 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  background: url("https://c.tenor.com/AJBv6U1rfkQAAAAC/background-image-galaxy.gif");
+  background-color: var(--bg__color);
   min-width: 100%;
+  height: 92vh;
 }
 
 .movies__content {
   display: flex;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   padding: 4em 0px 1em 0px;
@@ -19,35 +21,32 @@
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  gap: 4em;
 }
 
 .movie__card {
   display: flex;
-  flex-direction: column;
-  background: url("https://c.tenor.com/ga_-GfdZDtkAAAAC/purple-rain-wallpaper.gif");
-  text-align: center;
-  border-radius: 15px;
-  /* offset-x | offset-y | blur-radius | spread-radius | color */
-  box-shadow: 4px 7px 0px 0px var(--dark__purple-color);
+  flex-flow: column wrap;
   align-items: center;
-  /* justify-content: center; */
-  max-width: 350px;
+  justify-content: center;
+  background-color: var(--light-brown__color);
+  text-align: center;
+  border-radius: 10px 10px 10px 10px;
+  margin: 2em;
+}
+
+.watched {
+  margin: 1em 2em 1em 2em;
 }
 
 .movie__title {
   letter-spacing: 2px;
+  border-radius: 15px 15px 0px 0px;
   font-size: 24px;
-  background-color: var(--dark__purple-color);
+  background-color: var(--beige__color);
   width: 100%;
-  border-radius: 10px 10px 0px 0px;
-  box-shadow: 4px 0px 0px 0px var(--dark__purple-color);
 }
 
 .movies__img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 400px;
   height: 400px;
   overflow: hidden;
@@ -59,9 +58,9 @@
 }
 
 .movie__desc-text {
-  background-color: var(--purple__color);
+  background-color: var(--beige__color);
   width: 100%;
   padding: 0.5em;
   border-radius: 0px 0px 15px 15px;
-  box-shadow: 0px 7px 0px 0px var(--dark__purple-color);
+  box-shadow: 0px 7px 0px 0px var(--brown__color);
 }

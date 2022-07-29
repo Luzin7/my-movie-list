@@ -17,34 +17,34 @@ function Movies() {
         <h2 className="movies__title">Filmes avaliados</h2>
         <div className="movies__content">
           <ul className="movies__cards">
-            {MOVIES.map((movie) => (
-              <Link key={movie.id} to={`/movies/movie/${movie.id}`}>
-                <li className="movie__card">
-                  <h3 className="movie__title">{movie.name}</h3>
-                  <div className="movies__img">
-                    <img
-                      className="movie__img"
-                      src={movie.img}
-                      alt={`Capa do filme ${movie.name}`}
-                    />
-                  </div>
-                  <p className="movie__desc-text">
-                    Resumo: {movie.description}
-                  </p>
-                </li>
-              </Link>
-            ))}
+            <div className="slider">
+              <div className="slides">
+                {MOVIES.map((movie) => (
+                  <li key={movie.id} className="movie__card watched">
+                    <Link to={`/movies/movie/${movie.id}`}>
+                      <h3 className="movie__title">{movie.name}</h3>
+                      <div className="movies__img">
+                        <img
+                          className="movie__img"
+                          src={movie.img}
+                          alt={`Capa do filme ${movie.name}`}
+                        />
+                      </div>
+                      <p className="movie__desc-text">{movie.description}</p>
+                    </Link>
+                  </li>
+                ))}
+              </div>
+            </div>
           </ul>
         </div>
       </section>
       <section className="next__movies">
-        <h2 className="movies__title-sec">
-          Próximos títulos previstos a serem avaliados
-        </h2>
+        <h2 className="next movies__title-sec">Próximos filmes</h2>
         <div className="movies__content">
           <ul className="movies__cards">
             {NEXT_MOVIES.map((movie) => (
-              <li key={movie.id} className="movie__card">
+              <li key={movie.id} className="movie__card unwatched">
                 <h3 className="movie__title">{movie.name}</h3>
                 <div className="movies__img">
                   <img
@@ -58,6 +58,7 @@ function Movies() {
           </ul>
         </div>
       </section>
+      {/* <span> Voltar ao topo</span> */}
     </main>
   );
 }

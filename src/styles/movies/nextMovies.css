@@ -5,4 +5,21 @@
   align-items: center;
   min-width: 100%;
   text-align: center;
+  background: var(--black__jogos);
+}
+
+.next {
+  color: var(--white__color);
+}
+
+.unwatched {
+  background-color: black;
+}
+
+.unwatched .movie__title{
+  background-color: var(--white__color);
+}
+
+.unwatched .movie__img {
+  mix-blend-mode: luminosity;
 }
