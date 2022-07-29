@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import * as Path from "../utils/pathNames";
 
 import NotFound from "../components/NotFound";
+import Loading from "./../components/Loading";
 const Home = React.lazy(() => import("../pages/Home"));
 const Movie = React.lazy(() => import("../pages/Movie"));
 
@@ -15,7 +16,7 @@ function Index() {
           exact
           path={Path.HOME}
           element={
-            <React.Suspense fallback={<h1>Carregando...</h1>}>
+            <React.Suspense fallback={<Loading />}>
               <Home />
             </React.Suspense>
           }
@@ -23,7 +24,7 @@ function Index() {
         <Route
           path={Path.MOVIE}
           element={
-            <React.Suspense fallback={<h1>Carregando...</h1>}>
+            <React.Suspense fallback={<Loading />}>
               <Movie />
             </React.Suspense>
           }

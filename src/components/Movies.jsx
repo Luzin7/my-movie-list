@@ -14,10 +14,7 @@ function Movies() {
         <input type="search" />
       </div> */}
       <section className="movies__watched">
-        <h1 className="movies__title">
-          Olá, Usuário! Veja minha lista (100% parcial) de filmes!
-        </h1>
-        <h2 className="movies__title-sec">Filmes avaliados</h2>
+        <h2 className="movies__title">Filmes avaliados</h2>
         <div className="movies__content">
           <ul className="movies__cards">
             {MOVIES.map((movie) => (

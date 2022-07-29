@@ -2,7 +2,7 @@
 
 Um projeto pessoal utilizado como "livro" de filmes que assisti com meus amigos. Junto aos títulos, adicionamos nossas opiniões e notas. Além de existir uma seção de filmes que pretendemos assistir.
 
-Utilizo esse projeto para testes, portanto, caso esteja interessado em olhar o código, saiba que pode existir partes e arquivos inacabados e/ou em construção. O mesmo vale para commits que podem estar totalmente fora do convencional e/ou do correto.
+Utilizo esse projeto para testes, portanto, caso esteja interessado em olhar o código, deixo claro que podem existir partes e arquivos inacabados e/ou em construção. O mesmo vale para commits que podem estar totalmente fora do convencional e/ou do correto. Este é meu projeto "laboratório".
 
 ## Funcionalidades (até o momento)
 

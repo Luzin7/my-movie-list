@@ -7,12 +7,6 @@
   min-width: 100%;
 }
 
-.movies__title-sec {
-  padding-top: 1em;
-  font-size: 38px;
-  text-shadow: 2px 4px 0px var(--purple__color);
-}
-
 .movies__content {
   display: flex;
   justify-content: center;
@@ -25,7 +19,7 @@
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  gap: 2em;
+  gap: 4em;
 }
 
 .movie__card {
@@ -38,7 +32,7 @@
   box-shadow: 4px 7px 0px 0px var(--dark__purple-color);
   align-items: center;
   /* justify-content: center; */
-  width: 500px;
+  max-width: 350px;
 }
 
 .movie__title {

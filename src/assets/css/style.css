@@ -41,10 +41,6 @@ progress {
   -webkit-appearance: none;
 }
 
-body::-webkit-scrollbar {
-  width: 0px;
-}
-
 :root {
   --black__color: #1b1b1b;
   --purple__color: #9308f0;

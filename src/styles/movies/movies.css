@@ -6,15 +6,13 @@
 }
 
 .movies__title {
-  background: rgb(27, 27, 27);
-  background: linear-gradient(
-    180deg,
-    rgba(27, 27, 27, 1) 0%,
-    rgba(4, 2, 4, 0.5270483193277311) 100%
-  );
-  width: 100%;
-  text-align: center;
-  font-size: 48px;
-  padding: 0.5em;
-  color: var(--white__color);
+  padding-top: 1em;
+  font-size: 38px;
+  text-shadow: 2px 4px 0px var(--purple__color);
+}
+
+.movies__title-sec {
+  padding-top: 1em;
+  font-size: 38px;
+  text-shadow: 2px 4px 0px var(--purple__color);
 }
