@@ -55,20 +55,20 @@ progress {
   -webkit-appearance: none;
 }
 
-/* :root {
-  --black__color: #1b1b1b;
-  --purple__color: #9308f0;
-  --dark__purple-color: #28026f;
-  --white__color: #fefeff;
-  --yellow__color: #ffe66d;
-} */
+input {
+  background-color: var(--white__color);
+  border: none;
+  outline: none;
+  font-size: 1.2em;
+  padding: 5px;
+}
 
 :root {
   --bg__color: #2d2424;
   --brown__color: #5c3d2e;
   --light-brown__color: #614436;
   --orange__color: #b85c38;
-  --white__color: #fefeff;
+  --white__color: #fffffe;
   --black__color: #1b1b1b;
   --beige__color: #e0c097;
 

@@ -1,6 +1,6 @@
 .movies__watched {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
   background-color: var(--bg__color);
@@ -47,8 +47,8 @@
 }
 
 .movies__img {
-  width: 400px;
-  height: 400px;
+  width: 250px;
+  height: 250px;
   overflow: hidden;
 }
 

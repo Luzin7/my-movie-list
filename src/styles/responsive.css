@@ -1,14 +1,17 @@
-@media only screen and (max-width: 600px) and (min-width: 100px) {
+@media only screen and (max-width: 480px) and (min-width: 320px) {
   .movie__info .movie__img {
-    max-width: 260px;
-    max-height: 700px;
-    border-radius: 15px;
-    box-shadow: 4px 7px 2px 1px var(--dark__purple-color);
-    overflow: hidden;
+    max-width: 80vw;
+    max-height: 800px;
   }
-  .movies__img {
-    width: 250px;
-    height: 250px;
-    overflow: hidden;
+
+  .movie__info__title {
+    font-size: 20px;
+  }
+
+  .movie__info__desc {
+    max-width: 90%;
+  }
+  .header__link {
+    font-size: 2vh;
   }
 }

@@ -7,10 +7,10 @@
 
 .movies__title {
   color: var(--beige__color);
-  padding-top: 1em;
-  font-size: 38px;
+  font-size: 2.7em;
   text-shadow: 2px 1px 0px var(--text-color__black);
   text-transform: uppercase;
+  text-align: center;
 }
 
 .movies__title::after {
@@ -23,11 +23,17 @@
   border-radius: 15px;
 }
 
+#total-watched {
+  color: var(--white__color);
+  text-shadow: 2px 1px 0px var(--text-color__black);
+  font-weight: lighter;
+}
+
 .movies__title-sec {
   padding-top: 1em;
   text-transform: uppercase;
   font-size: 38px;
-  text-shadow: 2px 4px 0px var(--purple__color);
+  text-shadow: 2px 1px 0px var(--text-color__black);
 }
 
 .slider {
@@ -42,11 +48,27 @@
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: mandatory;
 }
+
 .slides::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
+
 .slides::-webkit-scrollbar-thumb {
   background: var(--orange__color);
   border-radius: 2.5px;
+}
+
+.slides::-webkit-scrollbar-track {
+  background: var(--brown__color);
+  border-radius: 2.5px;
+}
+
+#go-back__link {
+  cursor: pointer;
+  color: var(--white__color);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  padding-bottom: 1em;
 }

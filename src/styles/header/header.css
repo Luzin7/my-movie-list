@@ -4,6 +4,7 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: 8vh;
   background-color: var(--beige__color);
   z-index: 1;

@@ -1,36 +1,28 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import * as Path from "../utils/pathNames";
+import ProtectRoutes from "../utils/protectRoutes";
+
 
 import NotFound from "../components/NotFound";
 import Loading from "./../components/Loading";
-const Home = React.lazy(() => import("../pages/Home"));
-const Movie = React.lazy(() => import("../pages/Movie"));
+const Register = lazy(() => import("../pages/Register"));
+const Home = lazy(() => import("../pages/Home"));
+const Movie = lazy(() => import("../pages/Movie"));
 
 function Index() {
   return (
     <Router>
-      <Routes>
-        <Route
-          index
-          exact
-          path={Path.HOME}
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <Home />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path={Path.MOVIE}
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <Movie />
-            </React.Suspense>
-          }
-        />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route element={<ProtectRoutes />}>
+            <Route exact path={Path.HOME} element={<Home />} />
+            <Route exact path={Path.MOVIE} element={<Movie />} />
+          </Route>
+          <Route index exact path={Path.REGISTER} element={<Register />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </Router>
   );
 }

@@ -242,6 +242,37 @@ export const MOVIES = [
     img: "https://flxt.tmsimg.com/assets/p8609718_p_v12_ar.jpg",
     media: "https://c.tenor.com/W_4orF8nm74AAAAC/drive-movie.gif",
   },
+  {
+    id: 52,
+    name: "Os Caras Malvados",
+    description: "Filme infanto juvenil que entrega o que promete.",
+    long__description: "Comparado ao filme Emoji isso é vinho.",
+    rating: "2.9",
+    img: "https://guianetflix.net/wp-content/uploads/2022/04/E-The-Bad-Guys-no-Netflix.jpg",
+    media:
+      "https://media3.giphy.com/media/jWgfWny9RG9CHRXO5A/giphy.gif?cid=ecf05e47kcq2f2e9cfnv0wzr9k6re2wj1ovpjpsfvitc88dn&rid=giphy.gif&ct=g",
+  },
+  {
+    id: 54,
+    name: "Dois Caras Legais",
+    description: "Ele tenta te fazer rir.",
+    long__description:
+      "Uma tentativa de diálogos Pulp Fiction's type e uma história rasa. Piadas repetitivas e datadas. Fora isso é mediano.",
+    rating: "3",
+    img: "https://upload.wikimedia.org/wikipedia/pt/e/e9/The_Nice_Guys_poster.png",
+    media:
+      "https://akns-images.eonline.com/eol_images/Entire_Site/201668/rs_540x220-160708104707-tumblr_o8nwyzrcvW1tkodheo4_540.gif?fit=around%7C540:220&output-quality=90&crop=540:220;center,top",
+  },
+  {
+    id: 56,
+    name: "Arremessando Alto",
+    description: "Creed de basquete.",
+    long__description:
+      "Não é necessário o conhecimento prévio de jogos de basquete ou algo do tipo para o filme ser bom. Uma história comovente e que consegue prender COMPLETAMENTE durante uma hora e cinquenta e sete minutos. Fora isso o filme possui uma ótima trilha sonora, montagem de áudio, bom uso de ângulos e ótimo film look.",
+    rating: "3.9",
+    img: "https://br.web.img3.acsta.net/c_310_420/pictures/22/05/25/20/17/5781885.jpg",
+    media: "https://i.gifer.com/origin/ae/aed5788927bb207496886554ad4c1df7.gif",
+  },
 ];
 
 export const NEXT_MOVIES = [
@@ -249,6 +280,12 @@ export const NEXT_MOVIES = [
     id: 1,
     name: "Fratura",
     media: "https://br.web.img3.acsta.net/pictures/19/09/16/11/03/3523781.jpg",
+  },
+  {
+    id: 3,
+    name: "Lightyear",
+    media:
+      "https://www.lumipop.diariocarioca.com/wp-content/uploads/2022/07/22106b80c035f08c9fbe916595c28eaf.jpg",
   },
   {
     id: 5,
@@ -289,5 +326,39 @@ export const NEXT_MOVIES = [
     name: "Ruptura (2a temporada)",
     media:
       "https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2022/04/06/454129389-16-severance.jpg",
+  },
+  {
+    id: 21,
+    name: "Os Sete Samurais",
+    media:
+      "https://engenhariadocinema.com.br/wp-content/uploads/2021/05/20200424160806_528999472_DM.jpg",
+  },
+  {
+    id: 23,
+    name: "Metrópolis",
+    media:
+      "https://images.adsttc.com/adbr001cdn.archdaily.net/wp-content/uploads/2012/06/1338567143_1262715141_metropolisposter.jpg",
+  },
+  {
+    id: 25,
+    name: "Se7en - Os Sete Crimes Capitais",
+    media:
+      "https://br.web.img3.acsta.net/pictures/210/124/21012465_2013061319170245.jpg",
+  },
+  {
+    id: 27,
+    name: "Azul Perfeito",
+    media: "https://images.justwatch.com/poster/248752133/s592/azul-perfeito",
+  },
+  {
+    id: 31,
+    name: "Mistérios sem solução",
+    media: "https://br.web.img3.acsta.net/pictures/20/06/24/07/38/1926193.jpg",
+  },
+  {
+    id: 33,
+    name: "O Iluminado",
+    media:
+      "https://www.itaucinemas.com.br/_img/_filmes/1375_capa.jpg?O-Iluminado",
   },
 ];

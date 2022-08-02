@@ -8,13 +8,26 @@ import "../styles/movies/moviesWatched.css";
 import "../styles/movies/nextMovies.css";
 
 function Movies() {
+  const moviesLenght = MOVIES.length;
+  const nextMoviesLenght = NEXT_MOVIES.length;
+  const totalMovies = moviesLenght + nextMoviesLenght;
+
+  function goTopBtn() {
+    window.scrollTo(0, 0);
+  }
+
   return (
     <main className="movies">
-      {/* <div className="search">
-        <input type="search" />
-      </div> */}
+      {/* <section className="movies__search">
+        <div className="search">
+          <input type="search" placeholder="Filme" />
+        </div>
+      </section> */}
       <section className="movies__watched">
-        <h2 className="movies__title">Filmes avaliados</h2>
+        <h1 className="movies__title">Filmes avaliados</h1>
+        <span id="total-watched">
+          {moviesLenght}/{totalMovies}
+        </span>
         <div className="movies__content">
           <ul className="movies__cards">
             <div className="slider">
@@ -22,7 +35,7 @@ function Movies() {
                 {MOVIES.map((movie) => (
                   <li key={movie.id} className="movie__card watched">
                     <Link to={`/movies/movie/${movie.id}`}>
-                      <h3 className="movie__title">{movie.name}</h3>
+                      <h2 className="movie__title">{movie.name}</h2>
                       <div className="movies__img">
                         <img
                           className="movie__img"
@@ -40,12 +53,12 @@ function Movies() {
         </div>
       </section>
       <section className="next__movies">
-        <h2 className="next movies__title-sec">Próximos filmes</h2>
+        <h1 className="next movies__title-sec">Próximos filmes</h1>
         <div className="movies__content">
           <ul className="movies__cards">
             {NEXT_MOVIES.map((movie) => (
               <li key={movie.id} className="movie__card unwatched">
-                <h3 className="movie__title">{movie.name}</h3>
+                <h2 className="movie__title">{movie.name}</h2>
                 <div className="movies__img">
                   <img
                     className="movie__img"
@@ -58,7 +71,9 @@ function Movies() {
           </ul>
         </div>
       </section>
-      {/* <span> Voltar ao topo</span> */}
+      <span id="go-back__link" onClick={goTopBtn}>
+        Voltar ao topo
+      </span>
     </main>
   );
 }

@@ -1,0 +1,12 @@
+.notFound {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.notFound h1,
+.notFound p {
+  color: var(--white__color);
+}

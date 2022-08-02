@@ -25,6 +25,7 @@
 .movie__info__title {
   color: var(--white__color);
   font-size: 48px;
+  text-align: center;
 }
 
 .rating {
