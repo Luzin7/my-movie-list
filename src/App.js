@@ -3,7 +3,7 @@ import "./styles/responsive.css";
 
 function App() {
   return (
-    <div id="home" className="App">
+    <div className="App">
       <Routes />
     </div>
   );
