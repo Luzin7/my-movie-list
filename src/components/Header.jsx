@@ -23,8 +23,8 @@ function Header() {
             <NavLink to={"/series"} className="header__link">
               Séries
             </NavLink>
-            <NavLink to={`/${USER_NAME}`} className="header__link">
-              {USER_NAME}
+            <NavLink to={`/${USER_NAME()}`} className="header__link">
+              {USER_NAME()}
             </NavLink>
           </li>
         </ul>
