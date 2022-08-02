@@ -24,7 +24,7 @@ function RegisterForm() {
 
     if (!validateUserName.test(name)) {
       alert(
-        "Nome inválido! Precisamos que o nome tenha pelo menos 8 dígitos e tenha apenas letras e/ou números."
+        "Nome inválido! É necessário que o nome tenha pelo menos 4 dígitos e tenha apenas letras e/ou números."
       );
     } else if (validateUserName.test(name)) {
       navigate(Path.HOME);
