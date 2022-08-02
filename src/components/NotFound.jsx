@@ -10,7 +10,7 @@ function NotFound() {
   const navigate = useNavigate();
 
   function navigateBack() {
-    navigate(Path.REGISTER);
+    navigate(Path.HOME);
   }
 
   return (
