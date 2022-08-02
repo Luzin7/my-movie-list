@@ -7,16 +7,20 @@ Utilizo esse projeto para testes, portanto, caso esteja interessado em olhar o c
 ## Funcionalidades (até o momento)
 
 - Rotas dinâmicas
+- Rotas Privadas
+- Simualação de autenticação simples (apenas nome de usuário)
 
 ## Aprendizados
 
-- Utilizar deploy diretamente do pacote JSON e executando no terminal
+- Utilizar deploy diretamente do pacote JSON e executando no terminal:
 
 ```bash
   npm run deploy
 ```
 
-- Fazer as rotas, utilizando HashRouter do react router, funcionarem no GH Pages e outros sites de hospedagem.
+- Criar as rotas utilizando HashRouter do react router. Assim consigo fazer as rotas funcionarem no GH Pages e outros sites de hospedagem.
+
+- Rotas Privadas. Utilizada para trazer mais segurança na navegação e, futuramente, proteção de dados.
 
 ## Rodando localmente
 
