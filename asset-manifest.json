@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/my-movie-list/static/css/main.d43ab1a0.css",
-    "main.js": "/my-movie-list/static/js/main.f4ac8dea.js",
+    "main.js": "/my-movie-list/static/js/main.36f62898.js",
     "static/css/755.0a18c44b.chunk.css": "/my-movie-list/static/css/755.0a18c44b.chunk.css",
     "static/js/755.21a10537.chunk.js": "/my-movie-list/static/js/755.21a10537.chunk.js",
     "static/css/128.a5fc1c2a.chunk.css": "/my-movie-list/static/css/128.a5fc1c2a.chunk.css",
     "static/js/128.c1ae9e11.chunk.js": "/my-movie-list/static/js/128.c1ae9e11.chunk.js",
-    "static/css/59.7574bc5c.chunk.css": "/my-movie-list/static/css/59.7574bc5c.chunk.css",
-    "static/js/59.d6d906be.chunk.js": "/my-movie-list/static/js/59.d6d906be.chunk.js",
+    "static/css/59.6364059f.chunk.css": "/my-movie-list/static/css/59.6364059f.chunk.css",
+    "static/js/59.d6ede3ca.chunk.js": "/my-movie-list/static/js/59.d6ede3ca.chunk.js",
     "index.html": "/my-movie-list/index.html",
     "main.d43ab1a0.css.map": "/my-movie-list/static/css/main.d43ab1a0.css.map",
-    "main.f4ac8dea.js.map": "/my-movie-list/static/js/main.f4ac8dea.js.map",
+    "main.36f62898.js.map": "/my-movie-list/static/js/main.36f62898.js.map",
     "755.0a18c44b.chunk.css.map": "/my-movie-list/static/css/755.0a18c44b.chunk.css.map",
     "755.21a10537.chunk.js.map": "/my-movie-list/static/js/755.21a10537.chunk.js.map",
     "128.a5fc1c2a.chunk.css.map": "/my-movie-list/static/css/128.a5fc1c2a.chunk.css.map",
     "128.c1ae9e11.chunk.js.map": "/my-movie-list/static/js/128.c1ae9e11.chunk.js.map",
-    "59.7574bc5c.chunk.css.map": "/my-movie-list/static/css/59.7574bc5c.chunk.css.map",
-    "59.d6d906be.chunk.js.map": "/my-movie-list/static/js/59.d6d906be.chunk.js.map"
+    "59.6364059f.chunk.css.map": "/my-movie-list/static/css/59.6364059f.chunk.css.map",
+    "59.d6ede3ca.chunk.js.map": "/my-movie-list/static/js/59.d6ede3ca.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d43ab1a0.css",
-    "static/js/main.f4ac8dea.js"
+    "static/js/main.36f62898.js"
   ]
 }
