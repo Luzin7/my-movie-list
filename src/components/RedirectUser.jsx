@@ -2,14 +2,18 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { TOKEN } from "../utils/getAuthInfos";
 import * as Path from "../utils/pathNames";
+import "../styles/redirect.css";
 
 function RedirectUser() {
+  const [value, setValue] = useState(0);
   const counter = setInterval(counterUpdate, 100);
-  const [value, setValue] = useState(counter);
-  const navigate = useNavigate();
 
   function counterUpdate() {
-    setValue(value + getRandomValue(1, 10));
+    if (value < 99) {
+      setValue(value + getRandomValue(1, 15));
+    } else if (value >= 100) {
+      clearInterval(counter);
+    }
 
     clearInterval(counter);
   }
@@ -19,6 +23,7 @@ function RedirectUser() {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min);
   }
+  const navigate = useNavigate();
 
   function navigateBack() {
     if (TOKEN() !== "true") {
@@ -28,14 +33,22 @@ function RedirectUser() {
     }
   }
 
-  if (value > 99) {
+  if (value >= 100) {
     navigateBack();
   }
 
   return (
-    <div className="check__auth notFound">
-      <h1>Aguarde um pouco, estamos te redirecionando para o local correto.</h1>
-      <progress id="progress__bar" max="100" value={value} />
+    <div className="check__auth">
+      <h1 className="auth__title">
+        Aguarde um pouco, estamos te redirecionando para o local correto.
+      </h1>
+      <progress
+        className="rating__bar"
+        id="auth__bar"
+        max="100"
+        value={value}
+      />
+      <p></p>
     </div>
   );
 }

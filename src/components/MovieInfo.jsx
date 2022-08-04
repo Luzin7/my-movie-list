@@ -1,6 +1,8 @@
 import React from "react";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 import { MOVIES } from "./../data/movies";
+import * as Path from "../utils/pathNames";
 
 import "../styles/movie/movie.css";
 
@@ -17,12 +19,15 @@ function MovieInfo() {
         />
         <div className="movie__info__title-wrapper">
           <h1 className="movie__info__title">{movie.name}</h1>
-          <progress id="rating__bar" max="5" value={movie.rating} />
+          <progress className="rating__bar" max="5" value={movie.rating} />
           <span className="rating">{`${movie.rating}/5`}</span>
         </div>
         <div className="movie__info__desc">
           <p className="movie__info__desc-text">{movie.long__description}</p>
         </div>
+        <Link to={Path.MOVIES}>
+          <span id="back__button">Voltar</span>
+        </Link>
       </div>
     </div>
   );

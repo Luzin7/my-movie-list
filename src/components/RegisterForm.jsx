@@ -27,7 +27,7 @@ function RegisterForm() {
         "Nome inválido! É necessário que o nome tenha pelo menos 4 dígitos e tenha apenas letras e/ou números."
       );
     } else if (validateUserName.test(name)) {
-      navigate(Path.HOME);
+      navigate(Path.MOVIES);
       localStorage.setItem("userName", name);
       localStorage.setItem("token", "true");
     }
@@ -37,9 +37,15 @@ function RegisterForm() {
     <main className="form__register">
       <form className="form">
         {name === "" ? (
-          <h1 className="form__title">Como se chama?</h1>
+          <>
+            <h1 className="form__title">Crie seu nome de usuário</h1>
+            <p className="form__title-sec">É rapidinho, tá?</p>
+          </>
         ) : (
-          <h1 className="form__title">Olá, {name}!</h1>
+          <>
+            <h1 className="form__title">Olá, {name}!</h1>
+            <p className="form__title-sec">Que legal você por aqui.</p>
+          </>
         )}
         <input
           className="input name__input"

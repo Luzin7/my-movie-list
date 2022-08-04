@@ -14,17 +14,17 @@ function Header() {
       <div className="header__content">
         <ul className="header__links">
           <li className="header__link-wrapper">
-            <NavLink to={Path.HOME} className="header__link">
+            {/* <NavLink to={Path.HOME} className="header__link">
               Início
+            </NavLink> */}
+            <NavLink to={`/${USER_NAME()}`} className="header__link">
+              {USER_NAME()}
             </NavLink>
-            <NavLink to={Path.HOME} className="header__link">
+            <NavLink to={Path.MOVIES} className="header__link">
               Filmes
             </NavLink>
             <NavLink to={"/series"} className="header__link">
               Séries
-            </NavLink>
-            <NavLink to={`/${USER_NAME()}`} className="header__link">
-              {USER_NAME()}
             </NavLink>
           </li>
         </ul>

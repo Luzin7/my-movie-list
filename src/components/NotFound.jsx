@@ -5,7 +5,7 @@ import * as Path from "../utils/pathNames";
 import "../styles/notFound.css";
 
 function NotFound() {
-  setTimeout(navigateBack, 5000);
+  setTimeout(navigateBack, 4000);
 
   const navigate = useNavigate();
 
@@ -16,7 +16,7 @@ function NotFound() {
   return (
     <div className="notFound">
       <h1>Página não encontrada :o</h1>
-      <p>Vamos te colocar no caminho certo em 5 segundos :D.</p>
+      <p>Vamos te colocar no caminho certo em 4 segundos :D.</p>
     </div>
   );
 }

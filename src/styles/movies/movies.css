@@ -24,9 +24,10 @@
 }
 
 #total-watched {
-  color: var(--white__color);
   text-shadow: 2px 1px 0px var(--text-color__black);
-  font-weight: lighter;
+  color: var(--light-brown__color);
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 .movies__title-sec {
@@ -71,4 +72,10 @@
   text-transform: uppercase;
   font-size: 1.5em;
   padding-bottom: 1em;
+}
+
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+  .movies__title {
+    font-size: 8vw;
+  }
 }

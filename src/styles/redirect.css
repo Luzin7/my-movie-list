@@ -1,0 +1,25 @@
+.check__auth {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--beige__color);
+  height: 100vh;
+}
+
+.auth__title {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: var(--white__color);
+  text-shadow: 2px 2px 0px var(--text-color__black);
+  padding: 2em;
+  text-align: center;
+}
+
+.rating__bar#auth__bar {
+  width: 40vw;
+}
+
+#auth__bar::-webkit-progress-bar {
+  height: 15px;
+}

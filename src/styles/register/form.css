@@ -11,8 +11,14 @@
 }
 
 .form__title {
-  padding: 0px 0px 1em 0px;
   text-align: center;
+}
+
+.form__title-sec {
+  text-align: center;
+  padding: 1em;
+  font-weight: lighter;
+  font-style: italic;
 }
 
 .input {
