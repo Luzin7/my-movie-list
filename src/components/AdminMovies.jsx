@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
+import React from "react";
 
-import { MOVIES, NEXT_MOVIES } from "../data/movies";
+import { MOVIES, NEXT_MOVIES } from "../data/admMovies";
 
 import "../styles/movies/movies.css";
 import "../styles/movies/moviesWatched.css";
 import "../styles/movies/nextMovies.css";
 
-function Movies() {
+function AdminMovies() {
   const moviesLenght = MOVIES.length;
   const nextMoviesLenght = NEXT_MOVIES.length;
   const totalMovies = moviesLenght + nextMoviesLenght;
@@ -23,7 +23,7 @@ function Movies() {
         </div>
       </section> */}
       <section className="movies__watched">
-        <h1 className="movies__title">Filmes avaliados</h1>
+        <h1 className="movies__title">Filmes vistos</h1>
         <span id="total-watched">
           {moviesLenght}/{totalMovies}
         </span>
@@ -33,17 +33,15 @@ function Movies() {
               <div className="slides">
                 {MOVIES.map((movie) => (
                   <li key={movie.id} className="movie__card watched">
-                    <Link to={`movie/${movie.id}`}>
-                      <h2 className="movie__title">{movie.name}</h2>
-                      <div className="movies__img">
-                        <img
-                          className="movie__img"
-                          src={movie.img}
-                          alt={`Capa do filme ${movie.name}`}
-                        />
-                      </div>
-                      <p className="movie__desc-text">{movie.description}</p>
-                    </Link>
+                    <h2 className="movie__title">{movie.name}</h2>
+                    <div className="movies__img">
+                      <img
+                        className="movie__img"
+                        src={movie.img}
+                        alt={`Capa do filme ${movie.name}`}
+                      />
+                    </div>
+                    <p className="movie__desc-text">{movie.rating}/5</p>
                   </li>
                 ))}
               </div>
@@ -55,18 +53,22 @@ function Movies() {
         <h1 className="next movies__title-sec">Próximos filmes</h1>
         <div className="movies__content">
           <ul className="movies__cards">
-            {NEXT_MOVIES.map((movie) => (
-              <li key={movie.id} className="movie__card unwatched">
-                <h2 className="movie__title">{movie.name}</h2>
-                <div className="movies__img">
-                  <img
-                    className="movie__img"
-                    src={movie.media}
-                    alt={`Capa do filme ${movie.name}`}
-                  />
-                </div>
-              </li>
-            ))}
+            <div className="slider">
+              <div className="slides">
+                {NEXT_MOVIES.map((movie) => (
+                  <li key={movie.id} className="movie__card unwatched">
+                    <h2 className="movie__title">{movie.name}</h2>
+                    <div className="movies__img">
+                      <img
+                        className="movie__img"
+                        src={movie.media}
+                        alt={`Capa do filme ${movie.name}`}
+                      />
+                    </div>
+                  </li>
+                ))}
+              </div>
+            </div>
           </ul>
         </div>
       </section>
@@ -77,4 +79,4 @@ function Movies() {
   );
 }
 
-export default Movies;
+export default AdminMovies;
