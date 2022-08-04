@@ -26,9 +26,13 @@ function RedirectUser() {
     } else if (TOKEN() === "true") {
       navigate(Path.MOVIES);
     }
+    if (TOKEN() === "eurt") {
+      navigate(Path.ADMIN);
+    }
   }
 
   if (value > 99) {
+    clearInterval(counter);
     navigateBack();
   }
 
