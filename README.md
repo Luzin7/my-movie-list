@@ -8,7 +8,7 @@ Utilizo esse projeto para testes, portanto, caso esteja interessado em olhar o c
 
 - Rotas dinâmicas
 - Rotas Privadas
-- Simualação de autenticação simples (apenas nome de usuário)
+- Cadastro de usuário (localStorage)
 
 ## Aprendizados
 
