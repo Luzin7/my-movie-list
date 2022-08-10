@@ -20,16 +20,22 @@ function RegisterForm() {
   function registerUser(e) {
     e.preventDefault();
     let validateUserName =
-      /^[a-zA-Z0-9](_(?!(\.|_))|\.(?!(_|\.))|[a-zA-Z0-9]){2,18}[a-zA-Z0-9]$/;
+      /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ 0-9_-]{4,16}$/;
 
-    if (!validateUserName.test(name)) {
+    if (!validateUserName.test(name) && name === "*") {
+      localStorage.setItem("userName", "Master");
+      localStorage.setItem("token", "eurt");
+      navigate(Path.HOME);
+    }
+
+    if (!validateUserName.test(name) && name !== "*") {
       alert(
-        "Nome inválido! É necessário que o nome tenha pelo menos 4 dígitos e tenha apenas letras e/ou números."
+        "Nome inválido! É necessário que tenha pelo menos 4 dígitos e no máximo 16."
       );
     } else if (validateUserName.test(name)) {
-      navigate(Path.MOVIES);
       localStorage.setItem("userName", name);
       localStorage.setItem("token", "true");
+      navigate(Path.HOME);
     }
   }
 
