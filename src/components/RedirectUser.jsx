@@ -10,11 +10,8 @@ function RedirectUser() {
 
   function counterUpdate() {
     if (value < 99) {
-      setValue(value + getRandomValue(1, 15));
-    } else if (value >= 100) {
-      clearInterval(counter);
+      setValue(value + getRandomValue(1, 40));
     }
-
     clearInterval(counter);
   }
 
@@ -31,9 +28,13 @@ function RedirectUser() {
     } else if (TOKEN() === "true") {
       navigate(Path.MOVIES);
     }
+    if (TOKEN() === "eurt") {
+      navigate(Path.ADMIN);
+    }
   }
 
   if (value >= 100) {
+    clearInterval(counter);
     navigateBack();
   }
 
