@@ -10,9 +10,11 @@ import "../styles/header/headerContent.css";
 
 function Header() {
   function logout() {
+    const origin = window.location.origin;
     var confirmLogout = window.confirm("Você tem certeza que deseja sair?");
     if (confirmLogout) {
       localStorage.clear();
+      window.location.href = origin + Path.REGISTER;
       window.location.reload();
     } else {
       window.alert("Você desistiu de desconectar, isso é bom!");
