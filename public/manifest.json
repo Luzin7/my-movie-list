@@ -3,6 +3,6 @@
   "name": "My Movie List",
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#00000"
+  "theme_color": "#e0c097",
+  "background_color": "#2d2424"
 }
