@@ -68,9 +68,37 @@ export const MOVIES = [
 ];
 
 export const NEXT_MOVIES = [
-  // {
-  //   id: Number,
-  //   name: 'string',
-  //   media: 'url',
-  // },
+  {
+    id: 1,
+    name: "To The Bone",
+    media:
+      "https://m.media-amazon.com/images/M/MV5BMTU1MTQ0NDAyNV5BMl5BanBnXkFtZTgwNjQ4MjE4MjI@._V1_FMjpg_UX1000_.jpg",
+  },
+  {
+    id: 3,
+    name: "The Witcher: Lenda do Lobo",
+    media: "https://br.web.img3.acsta.net/pictures/21/08/10/10/17/5059325.jpg",
+  },
+  {
+    id: 5,
+    name: "Purple Hearts",
+    media:
+      "https://m.media-amazon.com/images/M/MV5BNzI4ZTAwNzEtNTk5YS00ZWJmLWI1ODMtOTU4MTM5MzQ4OWM0XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_FMjpg_UX1000_.jpg",
+  },
+  {
+    id: 7,
+    name: "As Vantagens de Ser Invisível",
+    media: "https://images-na.ssl-images-amazon.com/images/I/81mbcHKS84L.jpg",
+  },
+  {
+    id: 9,
+    name: "Alerta Vermelho",
+    media:
+      "https://br.web.img3.acsta.net/c_310_420/pictures/21/10/28/20/55/0671708.jpg",
+  },
+  {
+    id: 11,
+    name: "Bigbug",
+    media: "https://br.web.img3.acsta.net/pictures/22/01/25/12/04/3975634.jpg",
+  },
 ];
