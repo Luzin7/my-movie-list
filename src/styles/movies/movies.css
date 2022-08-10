@@ -41,7 +41,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80vw;
+  width: 90vw;
 }
 
 .slides {
@@ -75,6 +75,36 @@
   text-transform: uppercase;
   font-size: 1.5em;
   padding-bottom: 1em;
+}
+
+.search__label {
+  color: var(--white__color);
+  font-size: 2em;
+  text-align: center;
+}
+
+.search__movies {
+  width: 100%;
+  background-color: var(--bg__color);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  gap: 1.2em;
+  min-height: 10vh;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.search__input {
+  margin-top: 1em;
+  border-radius: 15px;
+  font-size: 1.5em;
+  padding: 0.4em 0.7em;
+  width: 100%;
 }
 
 @media only screen and (max-width: 480px) and (min-width: 320px) {
