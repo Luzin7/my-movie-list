@@ -1,7 +1,7 @@
 {
   "name": "my-movie-list",
   "homepage": "https://luzin7.github.io/my-movie-list/",
-  "version": "0.1.0",
+  "version": "0.1.41",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
