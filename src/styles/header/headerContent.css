@@ -15,10 +15,17 @@
   background-color: grey;
 }
 
+.header__link-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header__links {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .header__link {
