@@ -3,7 +3,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import {
   ProtectDefaultRoutes,
   ProtectAdminRoutes,
-} from "../utils/protectRoutes";
+} from "../helpers/protectRoutes";
 import * as Path from "../utils/pathNames";
 
 import NotFound from "../components/NotFound";
