@@ -7,6 +7,8 @@ import "../styles/movies/moviesWatched.css";
 import "../styles/movies/nextMovies.css";
 
 function AdminMovies() {
+  window.history.pushState({}, "", "/nossos-filmes-💜");
+
   const moviesLenght = MOVIES.length;
   const nextMoviesLenght = NEXT_MOVIES.length;
   const totalMovies = moviesLenght + nextMoviesLenght;
@@ -17,11 +19,6 @@ function AdminMovies() {
 
   return (
     <main className="movies">
-      {/* <section className="movies__search">
-        <div className="search">
-          <input type="search" placeholder="Filme" />
-        </div>
-      </section> */}
       <section className="movies__watched">
         <h1 className="movies__title">Filmes vistos</h1>
         <span id="total-watched">
