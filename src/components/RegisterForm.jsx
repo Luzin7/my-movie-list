@@ -33,7 +33,7 @@ function RegisterForm() {
         "Nome inválido! É necessário que tenha pelo menos 4 dígitos e no máximo 16."
       );
     } else if (validateUserName.test(name)) {
-      localStorage.setItem("userName", name);
+      localStorage.setItem("userName", JSON.stringify(name));
       localStorage.setItem("token", "true");
       navigate(Path.HOME);
     }

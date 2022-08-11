@@ -1,6 +1,7 @@
-import { React, useState } from "react";
-
+import { React, useState} from "react";
 import { Link } from "react-router-dom";
+
+import { FavoriteMovies } from "../providers/favoriteMovies";
 
 import { MOVIES, NEXT_MOVIES } from "../data/movies";
 
@@ -9,6 +10,9 @@ import "../styles/movies/moviesWatched.css";
 import "../styles/movies/nextMovies.css";
 
 function Movies() {
+  const { favoriteMovies } = FavoriteMovies();
+
+  console.log(favoriteMovies);
   const [search, setSearch] = useState("");
   const moviesLenght = MOVIES.length;
   const nextMoviesLenght = NEXT_MOVIES.length;

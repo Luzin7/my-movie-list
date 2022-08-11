@@ -4,6 +4,7 @@ import {
   ProtectDefaultRoutes,
   ProtectAdminRoutes,
 } from "../utils/protectRoutes";
+import { FavoriteMoviesProvider } from "../providers/favoriteMovies";
 import * as Path from "../utils/pathNames";
 
 import NotFound from "../components/NotFound";
@@ -20,12 +21,22 @@ function Index() {
     <Router>
       <Suspense fallback={<Loading />}>
         <Routes>
+          {/* private routes */}
           <Route element={<ProtectDefaultRoutes />}>
-            <Route exact path={Path.MOVIES} element={<DefaultHome />} />
+            <Route
+              exact
+              path={Path.MOVIES}
+              element={
+                <FavoriteMoviesProvider>
+                  <DefaultHome />
+                </FavoriteMoviesProvider>
+              }
+            />
           </Route>
           <Route element={<ProtectAdminRoutes />}>
             <Route exact path={Path.ADMIN} element={<AdminHome />} />
           </Route>
+          {/* public routes */}
           <Route exact path={Path.HOME} element={<Redirect />} />
           <Route exact path={Path.REGISTER} element={<Register />} />
           <Route exact path={Path.MOVIE} element={<Movie />} />
