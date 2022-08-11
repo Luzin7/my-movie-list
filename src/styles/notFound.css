@@ -1,9 +1,30 @@
 .notFound {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: 100vh;
+  background-color: var(--bg__color);
+}
+
+.notFound h1 {
+  font-size: 20vw;
+  text-shadow: 4px 2px 0px var(--beige__color);
+}
+
+.notFound h1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  margin-bottom: 10px;
+  background-color: var(--light-brown__color);
+  border-radius: 15px;
+}
+
+.notFound p {
+  font-size: 2em;
 }
 
 .notFound h1,

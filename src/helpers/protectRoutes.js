@@ -1,6 +1,6 @@
 import { Navigate, Outlet } from "react-router-dom";
 import * as Path from "../utils/pathNames";
-import { TOKEN } from "./getAuthInfos";
+import { TOKEN } from "../utils/getAuthInfos";
 
 export const ProtectDefaultRoutes = () => {
   return TOKEN() === "true" ? <Outlet /> : <Navigate to={Path.REGISTER} />;

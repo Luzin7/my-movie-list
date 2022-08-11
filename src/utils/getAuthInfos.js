@@ -8,4 +8,3 @@ export const TOKEN = () => {
 
   return tokenID;
 };
-

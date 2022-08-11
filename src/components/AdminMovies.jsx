@@ -7,8 +7,6 @@ import "../styles/movies/moviesWatched.css";
 import "../styles/movies/nextMovies.css";
 
 function AdminMovies() {
-  window.history.pushState({}, "", "/nossos-filmes-💜");
-
   const moviesLenght = MOVIES.length;
   const nextMoviesLenght = NEXT_MOVIES.length;
   const totalMovies = moviesLenght + nextMoviesLenght;

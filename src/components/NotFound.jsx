@@ -15,8 +15,8 @@ function NotFound() {
 
   return (
     <div className="notFound">
-      <h1>Página não encontrada :o</h1>
-      <p>Vamos te colocar no caminho certo em 4 segundos :D.</p>
+      <h1>404</h1>
+      <p>Desculpe, a página que você está procurando não foi encontrada.</p>
     </div>
   );
 }
