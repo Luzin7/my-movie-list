@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { FavoriteMovies } from "../providers/favoriteMovies";
+import { FavoriteMovies } from "./../providers/favoriteMovies";
 
 import { MOVIES, NEXT_MOVIES } from "../data/movies";
 
@@ -12,7 +12,12 @@ import "../styles/movies/nextMovies.css";
 function Movies() {
   const { favoriteMovies, setFavoriteMovies } = FavoriteMovies();
 
-  console.log(favoriteMovies);
+  const fav = () => {
+    const a = favoriteMovies;
+
+    return JSON.stringify(a);
+  };
+
   const [search, setSearch] = useState("");
   const moviesLenght = MOVIES.length;
   const nextMoviesLenght = NEXT_MOVIES.length;
@@ -33,14 +38,24 @@ function Movies() {
     <main className="movies">
       <section className="search__movies">
         <div className="search">
-          <label className="search__label">Pesquise um filme</label>
+          <label
+            className="search__label"
+            onClick={() => {
+              setFavoriteMovies((prev) => [
+                ...prev,
+                randomMovieRecomendation,
+              ]);
+              localStorage.setItem("favMovie", fav());
+              console.log(favoriteMovies);
+            }}
+          >
+            Pesquise um filme
+          </label>
           <input
             className="search__input"
             type="search"
             placeholder="Filme"
-            onChange={(e) =>
-              setSearch(() => e.target.value)
-            }
+            onChange={(e) => setSearch(() => e.target.value)}
           />
         </div>
       </section>
@@ -64,6 +79,7 @@ function Movies() {
                               className="movie__img"
                               src={movie.img}
                               alt={`Capa do filme ${movie.name}`}
+
                             />
                           </div>
                           <p className="movie__desc-text">
@@ -97,6 +113,7 @@ function Movies() {
                   className="movie__img"
                   src={randomMovieRecomendation.media}
                   alt={`Capa do filme ${randomMovieRecomendation.name}`}
+
                 />
               </div>
             </li>

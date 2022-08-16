@@ -39,7 +39,15 @@ function Index() {
           {/* public routes */}
           <Route exact path={Path.HOME} element={<Redirect />} />
           <Route exact path={Path.REGISTER} element={<Register />} />
-          <Route exact path={Path.MOVIE} element={<Movie />} />
+          <Route
+            exact
+            path={Path.MOVIE}
+            element={
+              <FavoriteMoviesProvider>
+                <Movie />
+              </FavoriteMoviesProvider>
+            }
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
