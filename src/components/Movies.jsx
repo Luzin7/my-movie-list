@@ -1,4 +1,4 @@
-import { React, useState} from "react";
+import { React, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { FavoriteMovies } from "../providers/favoriteMovies";
@@ -10,7 +10,7 @@ import "../styles/movies/moviesWatched.css";
 import "../styles/movies/nextMovies.css";
 
 function Movies() {
-  const { favoriteMovies } = FavoriteMovies();
+  const { favoriteMovies, setFavoriteMovies } = FavoriteMovies();
 
   console.log(favoriteMovies);
   const [search, setSearch] = useState("");
@@ -38,7 +38,9 @@ function Movies() {
             className="search__input"
             type="search"
             placeholder="Filme"
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) =>
+              setSearch(() => e.target.value)
+            }
           />
         </div>
       </section>

@@ -23,7 +23,7 @@ function RegisterForm() {
       /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ 0-9_-]{4,16}$/;
 
     if (!validateUserName.test(name) && name === "*") {
-      localStorage.setItem("userName", "🤎");
+      localStorage.setItem("userName", "Master");
       localStorage.setItem("token", "eurt");
       navigate(Path.HOME);
     }

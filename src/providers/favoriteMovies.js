@@ -1,29 +1,25 @@
-import { React, createContext, useContext, useState, useEffect } from "react";
+// import { React, createContext, useContext, useState, useEffect } from "react";
 
-export const FavoriteMoviesContext = createContext({});
+// import { MOVIES } from "./../data/movies";
 
-export const FavoriteMoviesProvider = (props) => {
-  const [favoriteMovies, setFavoriteMovies] = useState({
-    name: undefined,
-  });
+// export const FavoriteMoviesContext = createContext({});
 
-  useEffect(() => {
-    const userName = localStorage.getItem("userName");
+// export const FavoriteMoviesProvider = (props) => {
+//   const [favoriteMovies, setFavoriteMovies] = useState([]);
+  
+//   useEffect(() => {
+//     const movie2 = MOVIES.find((movie) => movie.id === 4);
 
-    if (userName) {
-      setFavoriteMovies({ name: JSON.parse(userName) });
-    } else {
-      setFavoriteMovies({ name: "" });
-    }
-  }, []);
+//     setFavoriteMovies(favoriteMovies.push(movie2));
+//   }, []);
 
-  return (
-    <FavoriteMoviesContext.Provider
-      value={{ favoriteMovies, setFavoriteMovies }}
-    >
-      {props.children}
-    </FavoriteMoviesContext.Provider>
-  );
-};
+//   return (
+//     <FavoriteMoviesContext.Provider
+//       value={{ favoriteMovies, setFavoriteMovies }}
+//     >
+//       {props.children}
+//     </FavoriteMoviesContext.Provider>
+//   );
+// };
 
-export const FavoriteMovies = () => useContext(FavoriteMoviesContext);
+// export const FavoriteMovies = () => useContext(FavoriteMoviesContext);
