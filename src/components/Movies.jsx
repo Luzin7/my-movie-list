@@ -11,12 +11,7 @@ import "../styles/movies/nextMovies.css";
 
 function Movies() {
   const { favoriteMovies, setFavoriteMovies } = FavoriteMovies();
-
-  const fav = () => {
-    const a = favoriteMovies;
-
-    return JSON.stringify(a);
-  };
+  localStorage.setItem("favMovies", JSON.stringify(favoriteMovies));
 
   const [search, setSearch] = useState("");
   const moviesLenght = MOVIES.length;
@@ -27,8 +22,16 @@ function Movies() {
     e.name.toLowerCase().includes(search.toLowerCase())
   );
 
+  const isFavorite = (id) => favoriteMovies.find((movie) => movie.id === id);
+
   var randomMovieRecomendation =
     NEXT_MOVIES[Math.floor(Math.random() * NEXT_MOVIES.length)];
+
+  function addFavoriteMovie(id) {
+    const movie = MOVIES.find((movie) => movie.id === id);
+    setFavoriteMovies((prev) => [...prev, movie]);
+    localStorage.setItem("favMovies", JSON.stringify(favoriteMovies));
+  }
 
   function goTopBtn() {
     window.scrollTo(0, 0);
@@ -38,19 +41,7 @@ function Movies() {
     <main className="movies">
       <section className="search__movies">
         <div className="search">
-          <label
-            className="search__label"
-            onClick={() => {
-              setFavoriteMovies((prev) => [
-                ...prev,
-                randomMovieRecomendation,
-              ]);
-              localStorage.setItem("favMovie", fav());
-              console.log(favoriteMovies);
-            }}
-          >
-            Pesquise um filme
-          </label>
+          <label className="search__label">Pesquise um filme</label>
           <input
             className="search__input"
             type="search"
@@ -72,20 +63,37 @@ function Movies() {
                   <div className="slides">
                     {movies.map((movie) => (
                       <li key={movie.id} className="movie__card watched">
-                        <Link to={`movie/${movie.id}`}>
-                          <h2 className="movie__title">{movie.name}</h2>
+                        <div className="movie__title">
+                          <h2 className="movie__title-text">{movie.name}</h2>
+                          {isFavorite(movie.id) ? (
+                            <div className="isfavorite">
+                              <span className="favorite true">★</span>
+                            </div>
+                          ) : (
+                            <div className="isfavorite">
+                              <span
+                                className="favorite false"
+                                onClick={() => {
+                                  addFavoriteMovie(movie.id);
+                                }}
+                              >
+                                ☆
+                              </span>
+                            </div>
+                          )}
+                        </div>
+                        <Link to={`/movie/${movie.id}`}>
                           <div className="movies__img">
                             <img
                               className="movie__img"
                               src={movie.img}
                               alt={`Capa do filme ${movie.name}`}
-
                             />
                           </div>
+                        </Link>
                           <p className="movie__desc-text">
                             {movie.description}
                           </p>
-                        </Link>
                       </li>
                     ))}
                   </div>
@@ -113,7 +121,6 @@ function Movies() {
                   className="movie__img"
                   src={randomMovieRecomendation.media}
                   alt={`Capa do filme ${randomMovieRecomendation.name}`}
-
                 />
               </div>
             </li>

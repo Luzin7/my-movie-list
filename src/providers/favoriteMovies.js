@@ -4,10 +4,10 @@ export const FavoriteMoviesContext = createContext({});
 
 export const FavoriteMoviesProvider = (props) => {
   const [favoriteMovies, setFavoriteMovies] = useState(
-    localStorage.favMovie ? JSON.parse(localStorage.getItem("favMovie")) : []
+    localStorage.getItem("favMovies")
+      ? JSON.parse(localStorage.getItem("favMovies"))
+      : []
   );
-  console.log(favoriteMovies);
-
   return (
     <FavoriteMoviesContext.Provider
       value={{ favoriteMovies, setFavoriteMovies }}

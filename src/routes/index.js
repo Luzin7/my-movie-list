@@ -15,6 +15,7 @@ const Register = lazy(() => import("../pages/Register"));
 const DefaultHome = lazy(() => import("../pages/DefaultHome"));
 const Movie = lazy(() => import("../pages/Movie"));
 const AdminHome = lazy(() => import("../pages/AdminHome"));
+const UserProfile = lazy(() => import("../pages/UserProfile"));
 
 function Index() {
   return (
@@ -32,6 +33,15 @@ function Index() {
                 </FavoriteMoviesProvider>
               }
             />
+            <Route
+              exact
+              path={Path.USER_PROFILE}
+              element={
+                <FavoriteMoviesProvider>
+                  <UserProfile />
+                </FavoriteMoviesProvider>
+              }
+            />
           </Route>
           <Route element={<ProtectAdminRoutes />}>
             <Route exact path={Path.ADMIN} element={<AdminHome />} />
@@ -39,15 +49,7 @@ function Index() {
           {/* public routes */}
           <Route exact path={Path.HOME} element={<Redirect />} />
           <Route exact path={Path.REGISTER} element={<Register />} />
-          <Route
-            exact
-            path={Path.MOVIE}
-            element={
-              <FavoriteMoviesProvider>
-                <Movie />
-              </FavoriteMoviesProvider>
-            }
-          />
+          <Route exact path={Path.MOVIE} element={<Movie />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

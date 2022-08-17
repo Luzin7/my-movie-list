@@ -13,7 +13,7 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  padding: 4em 0px 1em 0px;
+  padding: 2.5em 0px 1em 0px;
 }
 
 .movies__cards {
@@ -38,19 +38,38 @@
   margin: 1em 2em 1em 2em;
 }
 
-.watched a{
-display: flex;
-flex-flow: column wrap;
-align-items: center;
-justify-content: center;
+.watched a {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .movie__title {
-  letter-spacing: 2px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
   border-radius: 15px 15px 0px 0px;
-  font-size: 24px;
   background-color: var(--beige__color);
   width: 100%;
+}
+
+.movie__title-text {
+  letter-spacing: 2px;
+  font-size: 24px;
+}
+
+.isfavorite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  max-height: 100%;
+}
+
+.favorite {
+  font-size: 2.5em;
 }
 
 .movies__img {

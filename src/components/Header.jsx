@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 
 import * as Path from "../utils/pathNames";
 import { USER_NAME } from "./../utils/getAuthInfos";
-import "../scripts/changeColorHeader";
 
 import "../styles/header/header.css";
 import "../styles/header/headerContent.css";
@@ -26,7 +25,7 @@ function Header() {
       <div className="header__content">
         <ul className="header__links">
           <li className="header__link-wrapper">
-            <NavLink to={"user"} className="header__link">
+            <NavLink to={`/profile/${USER_NAME()}`} className="header__link">
               {USER_NAME()}
             </NavLink>
           </li>
