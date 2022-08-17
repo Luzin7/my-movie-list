@@ -14,6 +14,7 @@ function Movies() {
   localStorage.setItem("favMovies", JSON.stringify(favoriteMovies));
 
   const [search, setSearch] = useState("");
+
   const moviesLenght = MOVIES.length;
   const nextMoviesLenght = NEXT_MOVIES.length;
   const totalMovies = moviesLenght + nextMoviesLenght;
@@ -22,6 +23,7 @@ function Movies() {
     e.name.toLowerCase().includes(search.toLowerCase())
   );
 
+  // funçao para saber se o filme está nos favoritos
   const isFavorite = (id) => favoriteMovies.find((movie) => movie.id === id);
 
   var randomMovieRecomendation =
@@ -65,6 +67,7 @@ function Movies() {
                       <li key={movie.id} className="movie__card watched">
                         <div className="movie__title">
                           <h2 className="movie__title-text">{movie.name}</h2>
+                          {/* condicionando o estilo da estrela caso o filme tenha sido favoritado ou não */}
                           {isFavorite(movie.id) ? (
                             <div className="isfavorite">
                               <span className="favorite true">★</span>
@@ -91,9 +94,7 @@ function Movies() {
                             />
                           </div>
                         </Link>
-                          <p className="movie__desc-text">
-                            {movie.description}
-                          </p>
+                        <p className="movie__desc-text">{movie.description}</p>
                       </li>
                     ))}
                   </div>
@@ -102,9 +103,7 @@ function Movies() {
             </div>
           </>
         ) : (
-          <>
-            <h1 className="movies__title">Não avaliamos esse filme ainda</h1>
-          </>
+          <h1 className="movies__title">Não avaliamos esse filme ainda</h1>
         )}
       </section>
       <section className="next__movies">
