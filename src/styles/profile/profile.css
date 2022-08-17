@@ -1,8 +1,10 @@
-.profile__info {
+.user__info {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  padding: 2em 0;
+  background-color: var(--bg__color);
 }
 
 .pfp {
@@ -10,4 +12,63 @@
   width: 250px;
   height: 250px;
   object-fit: fill;
+  box-shadow: 0px 0px 20px var(--beige__color);
+  margin-bottom: 1.5em;
+}
+
+#profile__url__input{
+  border-radius: 25px;
+  background-color: var(--white__color);
+  padding: 7px 10px;
+  min-width: 25%;
+}
+
+.favorite__movies{
+  background-color: var(--bg__color);
+  min-height: 100vh;
+}
+
+.favorite__movies .movies__content{
+  padding: 0px;
+}
+
+.favorite__movies .movies__cards {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  max-width: 100vw;
+}
+
+.favorite__movies .movie__card {
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+  max-width: 700px;
+  height: 450px;
+}
+
+.favorite__movies .movie__title {
+  letter-spacing: 2px;
+  font-size: 1em;
+}
+
+.favorite__movies .movies__img {
+  width: 100%;
+  height: 400px;
+}
+
+.favorite__movies .movie__img {
+  border-radius: 15px;
+  width: auto;
+  height: 100%;
+}
+
+
+.favorite__movies .movie__desc-text {
+  background-color: var(--beige__color);
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 0px 0px 15px 15px;
+  box-shadow: none;
+  font-size: 0.5em;
 }
