@@ -70,5 +70,5 @@ Para fazer o deploy desse projeto rode
 
 ## Feedback
 
-Se você tiver algum feedback, por favor nos deixe saber por meio de fake@fake.com
+Se você tiver algum feedback, por favor entre em contato.
 
