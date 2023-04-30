@@ -8,6 +8,7 @@ import "../styles/header/header.css";
 import "../styles/header/headerContent.css";
 
 function Header() {
+  // desconectar e apagar todos os dados salvos do usuário
   function logout() {
     const origin = window.location.origin;
     var confirmLogout = window.confirm("Você tem certeza que deseja sair?");
@@ -26,7 +27,7 @@ function Header() {
         <ul className="header__links">
           <li className="header__link-wrapper">
             <NavLink to={`/profile/${USER_NAME()}`} className="header__link">
-              {USER_NAME()}
+              Perfil
             </NavLink>
           </li>
           <li className="header__link-wrapper">

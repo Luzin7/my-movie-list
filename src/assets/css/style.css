@@ -45,6 +45,7 @@ li {
 button {
   border: none;
   cursor: pointer;
+  background: none;
 }
 
 progress {
@@ -77,6 +78,17 @@ input {
   background: var(--white__color);
   border-radius: 5px;
   height: 10px;
+}
+
+.btn{
+  padding: 0.7em;
+  background-color: var(--beige__color);
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.2s;
 }
 
 :root {

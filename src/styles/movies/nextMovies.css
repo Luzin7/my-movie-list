@@ -3,9 +3,7 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  min-width: 100%;
   text-align: center;
-  background: var(--black__jogos);
 }
 
 .next {
@@ -13,13 +11,31 @@
 }
 
 .unwatched {
-  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease;
 }
 
-.unwatched .movie__title{
-  background-color: var(--white__color);
+.unwatched .movie__title {
+  color: var(--white__color);
+  margin-bottom: 1em;
+}
+
+.unwatched .movies__img {
+  border-radius: 7px;
+  width: 300px;
+  height: 500px;
+  overflow: hidden;
 }
 
 .unwatched .movie__img {
+  border-radius: 7px;
   mix-blend-mode: luminosity;
+  width: auto;
+  height: 100%;
+}
+
+.unwatched .movie__img:hover {
+  mix-blend-mode: normal;
 }

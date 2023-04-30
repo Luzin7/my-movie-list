@@ -60,7 +60,7 @@ function RegisterForm() {
           onChange={() => setName(handleChange)}
         />
         <button
-          className="button__register"
+          className="btn button__register"
           type="submit"
           onClick={registerUser}
         >

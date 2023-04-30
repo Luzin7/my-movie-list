@@ -28,20 +28,12 @@
   color: var(--text__color);
 }
 
-.button__register {
-  width: 40%;
+.btn.button__register {
+  width: 20%;
   margin-top: 2em;
-  padding: 0.7em;
-  background-color: var(--beige__color);
-  border-radius: 5px;
-  text-align: center;
   font-size: 1.1em;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: all 0.2s;
 }
 
-.button__register:hover {
-  width: 20%;
+.btn.button__register:hover {
   transform: scale(1.2);
 }

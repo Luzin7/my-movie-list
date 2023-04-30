@@ -67,9 +67,9 @@ function AdminMovies() {
           </ul>
         </div>
       </section>
-      <span id="go-back__link" onClick={goTopBtn}>
-        Voltar ao topo
-      </span>
+      <button className="btn" onClick={goTopBtn}>
+        Voltar ao topos
+      </button>
     </main>
   );
 }

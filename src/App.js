@@ -1,8 +1,14 @@
-import Routes from "./routes/index";
+import React, { lazy, Suspense } from "react";
+
+import Loading from "./components/Loading";
+const Routes = lazy(() => import("./routes/index"));
+
 function App() {
   return (
     <div className="App">
-      <Routes />
+      <Suspense fallback={<Loading />}>
+        <Routes />
+      </Suspense>
     </div>
   );
 }

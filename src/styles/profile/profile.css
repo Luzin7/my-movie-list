@@ -17,12 +17,46 @@
   margin-bottom: 1.5em;
 }
 
+.input__area {
+  text-align: center;
+}
+
+#profile__edit-text {
+  text-align: center;
+  color: var(--white__color);
+  font-size: 1.2em;
+  margin-bottom: 7px;
+}
+
 #profile__url__input {
+  animation: shake 0.7s infinite;
+  animation-play-state: paused;
   border-radius: 25px;
   background-color: var(--white__color);
   padding: 7px 10px;
   min-width: 25%;
+  opacity: 0;
+  transition: 0.4s;
 }
+
+#button__edit-profile {
+  opacity: 0;
+  transition: 0.4s;
+  border-radius: 25px;
+  margin-left: 17px;
+}
+
+.user__info.edit #profile__url__input {
+  opacity: 1;
+  border-radius: 5px;
+}
+
+.user__info.edit #button__edit-profile {
+  border-radius: 5px;
+  opacity: 1;
+}
+
+/* =======FAVORITE MOVIES====== */
 
 .favorite__movies {
   background-color: var(--bg__color);
@@ -36,25 +70,17 @@
 
 .favorite__movies .movies__cards {
   display: flex;
-  flex-flow: row wrap;
-  max-width: 100vw;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .favorite__movies .movie__card {
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
+  flex-flow: column wrap;
   margin: 1em;
-  max-width: 700px;
-  min-height: 450px;
 }
 
 .favorite__movies .movie__title-text {
   font-size: 1em;
-}
-
-.favorite__movies .favorite {
-  font-size: 2em;
 }
 
 .favorite__movies .movies__subtitle {
@@ -62,22 +88,47 @@
   font-size: 1.2em;
 }
 
+.favorite__movies .favorite {
+  font-size: 2em;
+}
+
 .favorite__movies .movies__img {
   width: 100%;
-  height: 400px;
+  height: 500px;
 }
 
 .favorite__movies .movie__img {
-  border-radius: 15px;
   width: auto;
   height: 100%;
 }
 
-.favorite__movies .movie__desc-text {
-  background-color: var(--beige__color);
-  width: 100%;
-  padding: 0.5em;
-  border-radius: 0px 0px 15px 15px;
-  box-shadow: none;
-  font-size: 0.5em;
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+  #button__edit-profile {
+    opacity: 0;
+    transition: 0.4s;
+    margin: 17px 0px 0px 0px;
+  }
 }

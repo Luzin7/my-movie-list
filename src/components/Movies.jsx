@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { FavoriteMovies } from "./../providers/favoriteMovies";
@@ -10,15 +10,33 @@ import "../styles/movies/moviesWatched.css";
 import "../styles/movies/nextMovies.css";
 
 function Movies() {
+  // hook personalizado trazendo o estado do context API
   const { favoriteMovies, setFavoriteMovies } = FavoriteMovies();
   localStorage.setItem("favMovies", JSON.stringify(favoriteMovies));
 
+  // estado para receber a pesquisa do usuário
   const [search, setSearch] = useState("");
+
+  // Pedindo permissão para notificar o usuário
+  useEffect(() => {
+    Notification.requestPermission()
+      .then((status) => status === "granted")
+      .then((isAllowed) => {
+        if (!isAllowed) {
+          return;
+        }
+        // conteúdo da notificação
+        new Notification("Ainda estou em desenvolvimento!", {
+          body: "O My Movie List é um site em desenvolvimento, se achar algo que não agrade, por favor, entre em contato.",
+        });
+      });
+  }, []);
 
   const moviesLenght = MOVIES.length;
   const nextMoviesLenght = NEXT_MOVIES.length;
   const totalMovies = moviesLenght + nextMoviesLenght;
 
+  // filtrando todos os filmes disponíveis
   const movies = MOVIES.filter((e) =>
     e.name.toLowerCase().includes(search.toLowerCase())
   );
@@ -26,15 +44,18 @@ function Movies() {
   // funçao para saber se o filme está nos favoritos
   const isFavorite = (id) => favoriteMovies.find((movie) => movie.id === id);
 
-  var randomMovieRecomendation =
+  // recomendar um filme aleatório sempre que a página atualiza
+  const randomMovieRecomendation =
     NEXT_MOVIES[Math.floor(Math.random() * NEXT_MOVIES.length)];
 
+  // funçao para adicionar o filme escolhido pelo usuário aos favoritos
   function addFavoriteMovie(id) {
     const movie = MOVIES.find((movie) => movie.id === id);
     setFavoriteMovies((prev) => [...prev, movie]);
     localStorage.setItem("favMovies", JSON.stringify(favoriteMovies));
   }
 
+  // funçao para levar o usuário ao topo da página
   function goTopBtn() {
     window.scrollTo(0, 0);
   }
@@ -65,26 +86,23 @@ function Movies() {
                   <div className="slides">
                     {movies.map((movie) => (
                       <li key={movie.id} className="movie__card watched">
-                        <div className="movie__title">
-                          <h2 className="movie__title-text">{movie.name}</h2>
-                          {/* condicionando o estilo da estrela caso o filme tenha sido favoritado ou não */}
-                          {isFavorite(movie.id) ? (
-                            <div className="isfavorite">
-                              <span className="favorite true">★</span>
-                            </div>
-                          ) : (
-                            <div className="isfavorite">
-                              <span
-                                className="favorite false"
-                                onClick={() => {
-                                  addFavoriteMovie(movie.id);
-                                }}
-                              >
-                                ☆
-                              </span>
-                            </div>
-                          )}
-                        </div>
+                        {/* condicionando o estilo da estrela caso o filme tenha sido favoritado ou não */}
+                        {isFavorite(movie.id) ? (
+                          <div className="isfavorite">
+                            <span className="favorite true">★</span>
+                          </div>
+                        ) : (
+                          <div className="isfavorite">
+                            <span
+                              className="favorite false"
+                              onClick={() => {
+                                addFavoriteMovie(movie.id);
+                              }}
+                            >
+                              ☆
+                            </span>
+                          </div>
+                        )}
                         <Link to={`/movie/${movie.id}`}>
                           <div className="movies__img">
                             <img
@@ -93,8 +111,8 @@ function Movies() {
                               alt={`Capa do filme ${movie.name}`}
                             />
                           </div>
+                          <h2 className="movie__title-text">{movie.name}</h2>
                         </Link>
-                        <p className="movie__desc-text">{movie.description}</p>
                       </li>
                     ))}
                   </div>
@@ -126,9 +144,9 @@ function Movies() {
           </ul>
         </div>
       </section>
-      <span id="go-back__link" onClick={goTopBtn}>
+      <button className="btn" id="go-back__link" onClick={goTopBtn}>
         Voltar ao topo
-      </span>
+      </button>
     </main>
   );
 }

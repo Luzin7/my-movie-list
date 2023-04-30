@@ -1,8 +1,5 @@
 .movies {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .movies__title {
@@ -31,19 +28,21 @@
 }
 
 .movies__title-sec {
-  padding-top: 1em;
-  text-transform: uppercase;
-  font-size: 38px;
+  padding-top: 0.7em;
+  font-size: 2.7em;
   text-shadow: 2px 1px 0px var(--text-color__black);
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .slider {
-  width: 90vw;
+  width: 95vw;
 }
 
 .slides {
+  padding: 0 0 2em 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   overflow-x: auto;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
@@ -52,26 +51,22 @@
 
 .slides::-webkit-scrollbar {
   width: 10px;
-  height: 10px;
+  height: 12px;
 }
 
 .slides::-webkit-scrollbar-thumb {
   background: var(--orange__color);
-  border-radius: 2.5px;
+  border-radius: 4px;
 }
 
 .slides::-webkit-scrollbar-track {
   background: var(--brown__color);
-  border-radius: 2.5px;
+  border-radius: 4px;
 }
 
 #go-back__link {
   cursor: pointer;
-  color: var(--white__color);
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 1.5em;
-  padding-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .search__label {

@@ -18,6 +18,7 @@ function MovieInfo() {
           alt={`capa do filme ${movie.name}`}
         />
         <div className="movie__info__title-wrapper">
+          <p className="movie__info__title summary">{movie.description}</p>
           <h1 className="movie__info__title">{movie.name}</h1>
           <progress className="rating__bar" max="5" value={movie.rating} />
           <span className="rating">{`${movie.rating}/5`}</span>
@@ -26,7 +27,7 @@ function MovieInfo() {
           <p className="movie__info__desc-text">{movie.long__description}</p>
         </div>
         <Link to={Path.MOVIES}>
-          <span id="back__button">Voltar</span>
+          <span className="btn">Voltar</span>
         </Link>
       </div>
     </div>
