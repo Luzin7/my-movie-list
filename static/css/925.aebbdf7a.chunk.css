@@ -1,0 +1,2 @@
+.notFound{align-items:center;background-color:var(--bg__color);display:flex;flex-flow:column;height:100vh;justify-content:center;text-align:center}.notFound h1{font-size:20vw;text-shadow:4px 2px 0 var(--bg-color-secondary)}.notFound h1:after{background-color:var(--color_secondary2);border-radius:15px;content:"";display:block;height:10px;margin-bottom:10px;width:100%}.notFound p{font-size:2em}.notFound h1,.notFound p{color:var(--text-color-primary)}
+/*# sourceMappingURL=925.aebbdf7a.chunk.css.map*/
